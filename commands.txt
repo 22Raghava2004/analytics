@@ -1,0 +1,49 @@
+# pandascreation 
+
+
+''
+import pandas as pd
+path="C:/Users/ragha/Downloads/analysis/earthquake_data_tsunami.csv"
+df=pd.read_csv(path)
+print(df)
+"""
+
+
+2 df.head() #for first 5 rows
+
+3.df.tail()  # for last  rows
+
+4.df.to_csv(path)  # this is to save the file
+
+5.df.dtypes # to view the data type  used in the file
+
+6.df.describe() # gve the statistical memory
+
+7.df.info() # this gives the ifo like how many data entered,no of columns
+
+8.df.columns # provide the columns
+
+9. ''' headers=["card","emp_name","emp_age","emp_salary","em_email","emp_mob"]
+df.columns=headers
+df.head() '''' # this is to change h=the all columns name at once
+
+10 . df.drop([5],axis=0) # drops the specific row
+
+11. df.dropna() # drops the nan row
+
+12. df.drop(columns=["Name"],axis=1).drop([4],axis=0)  # drops the specific column with row
+
+13. df.dropna(subset=["Age"],axis=0)  drops the row if the condition column is nan
+
+14. import numpy as np
+df["Age"].replace(np.nan,22)  replace the value in column if it has nan
+
+15. df.rename(columns={"Age":"Emp_age"})  # rename the column
+16. df.loc[index,"colum"]=n.nan #convert to nan to the specified row,column
+17. df.loc[index,"colum"]= value change the value in the given cordinates
+
+
+
+18 df["columname"].astype("int") # change the datatype
+
+ 
